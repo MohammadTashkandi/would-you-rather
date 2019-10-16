@@ -25,7 +25,10 @@ class Login extends React.Component {
         if (this.state.user === '') {
             addNotification('Error', 'Please select a user', 'danger')
         } else {
+            const { from } = this.props.location.state || { from: { pathname: '/' }}
+            console.log(from)
             this.props.dispatch(setAuthedUser(this.state.user))
+            this.props.history.push(from)
         }
     }
 

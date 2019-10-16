@@ -44,7 +44,10 @@ class NewQuestion extends React.Component {
 
         if (authedUser===null) {
             addNotification('Error', 'Please login first', 'danger')
-            return <Redirect to='/' />
+            return <Redirect to={{
+                pathname: '/',
+                state: {from: this.props.location}
+            }} />
         }
 
         return (

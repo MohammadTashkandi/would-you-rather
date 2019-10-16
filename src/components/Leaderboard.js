@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 import { calculateScore, addNotification } from '../utils/helpers'
 import UserRank from './UserRank'
 
@@ -11,7 +11,10 @@ class Leaderboard extends React.Component {
 
         if (authedUser===null) {
             addNotification('Error', 'Please login first', 'danger')
-            return <Redirect to='/' />
+            return <Redirect to={{
+                pathname: '/',
+                state: {from: this.props.location}
+            }} />
         }
 
         return (
@@ -30,4 +33,4 @@ const mapStateToProps = ({ users, authedUser }) => ({
     authedUser
 })
 
-export default connect(mapStateToProps)(Leaderboard)
+export default withRouter(connect(mapStateToProps)(Leaderboard))
