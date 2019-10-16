@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #1f306e;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.nav-link {
+  color: #1f306e;
+}
+
+.app {
+  max-width: 500px;
+  margin: auto
+}
+
+.question-body {
+  display: flex;
+}
+
+.img {
+  margin-top: 1rem;
+  border-right: 1px solid black;
+}
+
+.question-info {
+  margin-left: auto;
+  width: 20rem;
+}
+
+.circle {
+  background: lightgreen;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.user-header {
+  margin-left: auto;
+}
+
+.question-overview {
+  margin-bottom: 1rem;
+}
+
+.leaderboard-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-extend {
+  background-color: #553772;
+  border-color: #553772;
+  width: 80%;
+}
+
+.btn-extend:hover {
+  background-color: #c7417b;
+  border-color: #c7417b;
+}
+
+.nav-link.active-header {
+  background-color: #1f306e;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.chosen {
+  background-color: lightgreen;
+  border-color: green;
+}
+
+.btn-logout {
+  margin-left: 1rem;
+  background-color: #553772;
+  border-color: #553772;
+}
+
+.btn-logout:hover {
+  background-color: #c7417b;
+  border-color: #c7417b;
+}
+
+.header-img {
+  height: 40px;
+  width: 40px
+}
+
+.btn-register {
+  border-color: #f5487f;
+  background-color: #f5487f
+}
+
+.choose-icon {
+  display: flex;
+  justify-content: space-around;
 }
