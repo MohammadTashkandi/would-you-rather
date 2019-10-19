@@ -9,15 +9,6 @@ class QuestionPage extends React.Component {
     render() {
 
         const { authedUser, question } = this.props
-
-        // To check if user is logged in
-        if (authedUser===null) {
-            addNotification('Error', 'Please login first', 'danger')
-            return <Redirect to={{
-                pathname: '/',
-                state: {from: this.props.location}
-            }} />
-        }
         
         // To check if the question with this id exists
         if (question===null) {

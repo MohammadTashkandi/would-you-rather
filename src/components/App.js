@@ -10,6 +10,7 @@ import Leaderboard from './Leaderboard'
 import QuestionPage from './QuestionPage'
 import Register from './Register'
 import NotFound from './NotFound'
+import ProtectedRoute from './ProtectedRoute'
 
 class App extends React.Component {
 
@@ -28,10 +29,10 @@ class App extends React.Component {
             : (
               <div className='app'>
                 <Switch>
-                  <Route path='/' exact render={() => (<Home authedUser='tyler' />)} />
-                  <Route path='/add' render={() => (<NewQuestion />)} />
-                  <Route path='/leaderboard' render={() => (<Leaderboard />)} />
-                  <Route path='/questions/:id' render={() => (<QuestionPage />)} />
+                  <Route path='/' exact render={() => (<Home />)} />
+                  <ProtectedRoute path='/add' render={() => (<NewQuestion />)} />
+                  <ProtectedRoute path='/leaderboard' render={() => (<Leaderboard />)} />
+                  <ProtectedRoute path='/questions/:id' render={() => (<QuestionPage />)} />
                   <Route path='/register' render={() => (<Register />)} />
                   <Route component={NotFound} />
                 </Switch>

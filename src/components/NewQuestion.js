@@ -42,14 +42,6 @@ class NewQuestion extends React.Component {
 
         const { authedUser } = this.props
 
-        if (authedUser===null) {
-            addNotification('Error', 'Please login first', 'danger')
-            return <Redirect to={{
-                pathname: '/',
-                state: {from: this.props.location}
-            }} />
-        }
-
         return (
             <Card>
                 <Card.Header>Create New Question</Card.Header>
